@@ -8,11 +8,13 @@ public class Movement : MonoBehaviour
     private Rigidbody2D player;
     private Animator animator;
     private SpriteRenderer render;
+    private BoxCollider2D collid;
 
 
     //Stats
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private LayerMask jumpable;
 
     //Global Variables
     private float directionX;
@@ -25,6 +27,7 @@ public class Movement : MonoBehaviour
         player = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         render = GetComponent<SpriteRenderer>();
+        collid = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -41,7 +44,7 @@ public class Movement : MonoBehaviour
 
     private void Jump() 
     {
-        if (Input.GetButtonDown(StringStore.jump)) 
+        if (Input.GetButtonDown(StringStore.jump) && CheckJump()) 
         {
             player.velocity = new Vector2(player.velocity.x, jumpForce);
         }
@@ -92,5 +95,10 @@ public class Movement : MonoBehaviour
 
         animator.SetInteger("moveState", (int) moveState);
 
+    }
+
+    private bool CheckJump() {
+        return Physics2D.BoxCast(collid.bounds.center, 
+        collid.bounds.size, 0f, Vector2.down, .1f, jumpable);
     }
 }
