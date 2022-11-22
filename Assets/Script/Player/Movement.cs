@@ -28,6 +28,8 @@ public class Movement : MonoBehaviour
         animator = GetComponent<Animator>();
         render = GetComponent<SpriteRenderer>();
         collid = GetComponent<BoxCollider2D>();
+
+
     }
 
     // Update is called once per frame
@@ -97,8 +99,11 @@ public class Movement : MonoBehaviour
 
     }
 
-    private bool CheckJump() {
+
+    private bool CheckJump() 
+    {
         return Physics2D.BoxCast(collid.bounds.center, 
         collid.bounds.size, 0f, Vector2.down, .1f, jumpable);
     }
+
 }

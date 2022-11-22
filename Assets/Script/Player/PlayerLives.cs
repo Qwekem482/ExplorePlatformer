@@ -14,10 +14,20 @@ public class PlayerLives : MonoBehaviour
     [SerializeField] private Image[] lives;
     private int livesRemaining = 3;
 
+    private Vector3 respawnPoint;
+    [SerializeField] private GameObject endOfWorld;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
         player = GetComponent<Rigidbody2D>();
+
+        respawnPoint = transform.position;
+    }
+
+    private void Update()
+    {
+        WorldEndPosition();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -25,14 +35,13 @@ public class PlayerLives : MonoBehaviour
         if (collision.gameObject.CompareTag("Trap"))
         {
             LoseLive();
-            ZeroLive();
             if (ZeroLive()) {
-                //Death();
+                Death();
             }
             else 
             {
                 Hit();
-                //Respawn();
+                //Respawning();
             }
         }
     }
@@ -73,7 +82,31 @@ public class PlayerLives : MonoBehaviour
         lives[livesRemaining].enabled = true;
     }
 
+    private void WorldEndPosition() 
+    {
+        endOfWorld.transform.position = new Vector2(transform.position.x, endOfWorld.transform.position.y);
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if(collision.CompareTag("Checkpoint"))
+        {
+            CheckPoint();
+        }
+    }
+
+    public void Respawning() 
+    {
+        animator.SetTrigger(StringStore.respawn);
+        transform.position = respawnPoint;
+        player.bodyType = RigidbodyType2D.Dynamic;
+    }
+
+    private void CheckPoint() 
+    {
+        respawnPoint = transform.position;
+    }
 
 
     

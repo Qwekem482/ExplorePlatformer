@@ -9,6 +9,9 @@ public class StringStore
 
     public const string hit = "hit";
     public const string die = "die";
+    public const string respawn = "respawn";
+
+
     public const string diamond = "Diamond";
     public const string collected = "collected";
 

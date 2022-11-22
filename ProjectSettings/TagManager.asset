@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Diamond
   - Trap
+  - Checkpoint
+  - EndOfWorld
   layers:
   - Default
   - TransparentFX
