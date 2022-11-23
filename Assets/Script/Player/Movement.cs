@@ -80,7 +80,7 @@ public class Movement : MonoBehaviour
             moveState = MovementState.Idle;
         }
 
-        animator.SetInteger("moveState", (int) moveState);
+        animator.SetInteger(StringStore.moveState, (int) moveState);
 
     }
 
@@ -95,7 +95,7 @@ public class Movement : MonoBehaviour
             moveState = MovementState.Fall;
         }
 
-        animator.SetInteger("moveState", (int) moveState);
+        animator.SetInteger(StringStore.moveState, (int) moveState);
 
     }
 
