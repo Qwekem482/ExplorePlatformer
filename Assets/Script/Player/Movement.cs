@@ -28,8 +28,6 @@ public class Movement : MonoBehaviour
         animator = GetComponent<Animator>();
         render = GetComponent<SpriteRenderer>();
         collid = GetComponent<BoxCollider2D>();
-
-
     }
 
     // Update is called once per frame

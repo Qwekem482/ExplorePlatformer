@@ -65,6 +65,7 @@ public class Lives : MonoBehaviour
     private void Hit() {
         animator.SetTrigger(StringStore.hit);
         player.bodyType = RigidbodyType2D.Static;
+        //Debug.Log("After Hit, Lives Remaining = " + livesRemaining);
     }
 
     private void Death()
@@ -78,6 +79,8 @@ public class Lives : MonoBehaviour
         animator.SetTrigger(StringStore.respawn);
         transform.position = Checkpoint.respawnPoint;
         player.bodyType = RigidbodyType2D.Dynamic;
+
+        FallingPlatform.Restart();
     }  
 
     private void RestartLevel() {

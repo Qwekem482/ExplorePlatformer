@@ -12,6 +12,9 @@ public class StringStore
     public const string die = "die";
     public const string respawn = "respawn";
     public const string moveState = "moveState";
+    public const string fall = "fall";
+    public const string bounce = "bounce";
+    public const string activeStage = "active";
 
     public const string collected = "collected";
 
