@@ -7,7 +7,6 @@ public class Door : MonoBehaviour
 {
     private Animator animator;
     private BoxCollider2D boxCollider;
-
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -38,7 +37,10 @@ public class Door : MonoBehaviour
     {
         if (gameObject.CompareTag(StringStore.nextLevel))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+   ;
+            Data.AddData();
+            //All end door lead to NextLevelScene
+            SceneManager.LoadScene(1);
             Checkpoint.respawnPoint = transform.position;
         }
 

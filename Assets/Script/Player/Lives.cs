@@ -13,6 +13,10 @@ public class Lives : MonoBehaviour
     [SerializeField] private Image[] lives;
     private int livesRemaining = 3;
 
+    //Audio
+    [SerializeField] private AudioSource hitSE;
+    [SerializeField] private AudioSource collectSE;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -38,6 +42,7 @@ public class Lives : MonoBehaviour
     {
         if (collider.gameObject.CompareTag(StringStore.heart))
         {
+            collectSE.Play();
             Destroy(collider.gameObject);
             GainLive();
             //Debug.Log("Lives Remaining = " + livesRemaining);
@@ -63,6 +68,7 @@ public class Lives : MonoBehaviour
 
 
     private void Hit() {
+        hitSE.Play();
         animator.SetTrigger(StringStore.hit);
         player.bodyType = RigidbodyType2D.Static;
         //Debug.Log("After Hit, Lives Remaining = " + livesRemaining);

@@ -21,6 +21,9 @@ public class Movement : MonoBehaviour
     private enum MovementState { Idle, Run, Jump, Fall}
     private MovementState moveState;
 
+    //Sound
+    [SerializeField] private AudioSource jumpSE;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +49,7 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetButtonDown(StringStore.jump) && CheckJump()) 
         {
+            jumpSE.Play();
             player.velocity = new Vector2(player.velocity.x, jumpForce);
         }
     }
