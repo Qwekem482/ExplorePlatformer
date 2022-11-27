@@ -9,6 +9,7 @@ TagManager:
   - Checkpoint
   - EndOfWorld
   - Heart
+  - NextLevel
   layers:
   - Default
   - TransparentFX

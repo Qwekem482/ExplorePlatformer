@@ -16,7 +16,7 @@ public class Checkpoint : MonoBehaviour
         if(collision.gameObject.CompareTag(StringStore.checkpoint))
         {
             CheckPoint();
-            collision.gameObject.GetComponent<Animator>().SetInteger(StringStore.activeStage, 1);
+            collision.gameObject.GetComponent<Animator>().SetTrigger(StringStore.checkpointTrigger);
         }
     }
 

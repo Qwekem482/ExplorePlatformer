@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5652149614979273052}
   - component: {fileID: 5652149614979273049}
   - component: {fileID: 5652149614979273054}
-  - component: {fileID: 5652149614979273055}
   - component: {fileID: 5652149614979273048}
   m_Layer: 0
   m_Name: Checkpoint
@@ -107,18 +106,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5652149614979273055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5652149614979273053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf8fff25aa3bbf46ab89f2f04706df8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &5652149614979273048
 BoxCollider2D:
   m_ObjectHideFlags: 0

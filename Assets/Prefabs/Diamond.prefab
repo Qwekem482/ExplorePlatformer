@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 108117647178914482}
   - component: {fileID: 1564997633471729871}
-  - component: {fileID: 3703987499978747929}
   - component: {fileID: 6443190911520295359}
-  - component: {fileID: 3756248592990135928}
+  - component: {fileID: 4938989959992453175}
   m_Layer: 0
   m_Name: Diamond
   m_TagString: Diamond
@@ -87,26 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &3703987499978747929
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6229664772220890307}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 897ecb10a8f3abb449a64b835e427c3b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &6443190911520295359
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -133,15 +112,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.37274694, y: 0.30574167}
   m_EdgeRadius: 0
---- !u!114 &3756248592990135928
-MonoBehaviour:
+--- !u!95 &4938989959992453175
+Animator:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6229664772220890307}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6676e6ac3660734aab0d50d3f8a497e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 897ecb10a8f3abb449a64b835e427c3b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

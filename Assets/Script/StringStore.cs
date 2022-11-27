@@ -14,9 +14,10 @@ public class StringStore
     public const string moveState = "moveState";
     public const string fall = "fall";
     public const string bounce = "bounce";
-    public const string activeStage = "active";
+    public const string checkpointTrigger = "checkpointTrigger";
+    public const string doorTrigger = "doorTrigger";
 
-    public const string collected = "collected";
+    public const string collect = "collect";
 
     //Tags
     public const string heart = "Heart";
@@ -24,6 +25,7 @@ public class StringStore
     public const string trap = "Trap";
     public const string player = "Player";
     public const string checkpoint = "Checkpoint";
+    public const string nextLevel = "NextLevel";
 
 
 }
