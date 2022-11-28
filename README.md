@@ -3,7 +3,7 @@
 # ExplorePlatformer
 A simple 2D platformer game, is used for practising Unity
 
-## Play: [Unity Play](https://play.unity.com/mg/other/builds-90-9)
+## Play: [Unity Play](https://play.unity.com/mg/other/v1-0-1-uv)
 
 ![Screenshot](https://user-images.githubusercontent.com/80797630/204193221-fd23f46a-4823-412b-8592-fa1a47ad3058.png)
 ![Screenshot](https://user-images.githubusercontent.com/80797630/204193326-8f335708-a0f1-40e7-bddf-bc495a49a67a.png)
