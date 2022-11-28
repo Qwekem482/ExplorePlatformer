@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Scoring : MonoBehaviour
 {
-    private static int diamondCount;
-    private static int totalDiamond;
+    private static int diamondCount = 0;
+    private static int totalDiamond = 0;
 
     [SerializeField] private AudioSource collectSE;
 
@@ -20,15 +20,10 @@ public class Scoring : MonoBehaviour
         {
             collectSE.Play();
             diamondCount++;
-            Debug.Log("Diamonds: " + diamondCount);
+            //Debug.Log("Diamonds: " + diamondCount);
             Destroy(collider.gameObject);
-            Debug.Log("Time: " + Time.timeSinceLevelLoad);
+            //Debug.Log("Time: " + Time.timeSinceLevelLoad);
         }
-    }
-
-    private int CalcScore()
-    {
-        return 100 + diamondCount * 10 + (int) Time.timeSinceLevelLoad / 100;
     }
 
     public static int GetDiamond()
@@ -39,5 +34,10 @@ public class Scoring : MonoBehaviour
     public static int GetTotalDiamond()
     {
         return totalDiamond;
+    }
+
+    public static void ResetDiamond()
+    {
+        diamondCount = 0;
     }
 }

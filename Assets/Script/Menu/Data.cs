@@ -7,13 +7,13 @@ public class Data : MonoBehaviour
 {
     private static int totalCollectDiamond = 0;
     private static int totalDiamond = 0;
-    private static float totalTime = 0;
+    private static int totalTime = 0;
     private static int totalScore = 0;
 
     private static int level = 0;
     private static int collectDiamond = 0;
     private static int allDiamond = 0;
-    private static float time = 0;
+    private static int time = 0;
     private static int score = 0;
 
     public static void AddData()
@@ -21,18 +21,20 @@ public class Data : MonoBehaviour
         level = SceneManager.GetActiveScene().buildIndex - 2;
         allDiamond = Scoring.GetTotalDiamond();
         collectDiamond = Scoring.GetDiamond();
-        time = Time.timeSinceLevelLoad;
+        time = (int) Time.timeSinceLevelLoad;
         score = CalcScore();
 
         totalCollectDiamond += collectDiamond;
         totalDiamond += allDiamond;
         totalTime += time;
-        totalScore += score; 
+        totalScore += score;
+
+        Scoring.ResetDiamond(); 
     }
 
-    public static float[] GetLevelData()
+    public static int[] GetLevelData()
     {
-        float[] data = new float[5];
+        int[] data = new int[5];
         data[0] = level;
         data[1] = time;
         data[2] = collectDiamond;
@@ -41,9 +43,9 @@ public class Data : MonoBehaviour
         return data;
     }
 
-    public static float[] GetGameData()
+    public static int[] GetGameData()
     {
-        float[] data = new float[4];
+        int[] data = new int[4];
         data[0] = totalTime;
         data[1] = totalCollectDiamond;
         data[2] = totalDiamond;

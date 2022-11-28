@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,10 +20,10 @@ public class EndLevel : MonoBehaviour
     {
         endLvSE.Play();
         
-        float[] data = Data.GetLevelData();
+        int[] data = Data.GetLevelData();
 
         level.text = "YOU HAVE COMPLETED LEVEL " + data[0]; //[(int) fields.level];
-        time.text = "TIME: " + (int) (data[1] / 60) + ":" + Math.Round(data[1] % 60, 2);
+        time.text = "TIME: " + (int) (data[1] / 60) + ":" + data[1] % 60;
         diamond.text = "DIAMOND: " + data[2] + "/" + data[3];
         score.text = "SCORE: " + data[4]; 
     }
